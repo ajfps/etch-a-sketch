@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+}
+
+.content{
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.square{
+    background-color: red;
+    height: 8px;
+    width: 8px;
+    border: 0.1px solid black;
+}
+
+.center-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Corrected transform value */
+  }
