@@ -14,14 +14,12 @@ body{
 }
 
 .content{
-    background-color: bisque;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
 }
 
 .square{
-    background-color: red;
     height: 8px;
     width: 8px;
     border: 0.1px solid black;

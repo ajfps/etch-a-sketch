@@ -33,9 +33,11 @@ btn.addEventListener("click", () => {
     } else {
       validInput = true;
     }
+
+    btn.classList.remove("center-button");
   }
 
-  btn.classList.remove("center-button");
+
 
   for (let i = 0; i < squares*squares; i++) {
     let div = document.createElement("div");
@@ -43,13 +45,19 @@ btn.addEventListener("click", () => {
   
     content.appendChild(div);
   }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
   
   content.addEventListener("mouseover", (e) => {
     if (e.target.classList.contains("square")) {
-      e.target.setAttribute(
-        "style",
-        "background-color: blue; transition: 0.1s ease-out"
-      );
+      e.target.style.backgroundColor = getRandomColor();
     }
   });
   
